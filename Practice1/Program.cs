@@ -6,16 +6,21 @@ namespace Practice1
     {
         static void Main(string[] args)
         {
+            //Create the list for all the YouTube videos.
             List<Video> videoList = new List<Video>();
-
+            
+            //Create a new instance of video. And set the attributes for the title, author and length.
             Video video1 = new Video();
             video1._title = "Trip to Rank Game! All Tank, Mid Only!";
             video1._author = "ChooxTV";
             video1._length = 11.68F;
+
+                //Create a list of comment for first video. It has the attributes of the name of commenter and text of commenter.
                 List<Comment> Video1Comments = new List<Comment>();
                 Comment ChooxTVComment1 = new Comment();
                 ChooxTVComment1._nameOfCommenter = "@obiwanshinobi9368";
                 ChooxTVComment1._textOfCommenter = "Bat now I've just watched? 💕";
+                //Add this comment to the Video Comment list.
                 Video1Comments.Add(ChooxTVComment1);
 
                 Comment ChooxTVcomment2 = new Comment();
@@ -29,6 +34,7 @@ namespace Practice1
                 Video1Comments.Add(ChooxTVComment3);
 
                 video1._comments = Video1Comments;
+            //Add this video to the videolist. 
             videoList.Add(video1);
 
             Video video2 = new Video();
@@ -77,6 +83,8 @@ namespace Practice1
                 video3._comments = Video3Comments;
             videoList.Add(video3);
 
+            //Creates a loop that iterates through all videos in the list. It also prints out the title, author, length and the 
+            //number of comments for each of the videos.
             foreach (Video video in videoList)
             {
                 Console.WriteLine("--------------------------------------------------------------------------");
@@ -85,6 +93,8 @@ namespace Practice1
                 Console.WriteLine($"Length: {video._length} minutes");
                 Console.WriteLine($"Number of Comments: {video.GetCommentCount()}");
 
+                    //Creates a loop that iterates through all the comments on the video. It also prints out the username and comment
+                    //for each videos.
                     foreach (Comment comment in video._comments)
                     {
                         Console.WriteLine($"Username: {comment._nameOfCommenter}");
