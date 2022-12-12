@@ -12,7 +12,9 @@ namespace Practice2
     {
         _customerCountry = country;
     }
-    public bool Domestic()
+
+    //creates a boolean to know whether the customer lives in USA or not
+    public bool USAorNot()
         {
             if (_customerCountry == "USA")
             {

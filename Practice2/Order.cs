@@ -2,7 +2,6 @@ namespace Practice2
 {
     public class Order
     {
-        //private List<OrderItems> _orderItems;
         private int _orderNumber;
         private string _customerName;
         public List<Products> _product = new List<Products>();
@@ -23,6 +22,8 @@ namespace Practice2
             return _orderAddress;
         }
 
+        //This method will print the Packing Label of each products that contains the product quantity, product ID, product name
+        //total quantity cost.
         public string PrintPacking()
         {
             double totalCost = 0.00;
@@ -42,6 +43,7 @@ namespace Practice2
             return packingString;          
         }
 
+        //This method will print the Shipping Label that contains customer name, and customer's address.
         public string PrintShipping()
         {
             string shippingString = "-----------Address Label-----------" + Environment.NewLine;

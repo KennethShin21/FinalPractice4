@@ -19,6 +19,7 @@ namespace Practice2
             return _country;
         }
 
+        //gets the Full Address of the customer and return it as innerAddress
         public string getFullAddress()
         {
             string innerAddress = "";
@@ -37,6 +38,7 @@ namespace Practice2
             _country = country;
         }
 
+        //creates a boolean to know whether the customer lives in USA or not
         public bool USAorNot()
         {
             if (_country == "USA")

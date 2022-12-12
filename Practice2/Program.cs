@@ -10,7 +10,7 @@ namespace Practice2
             //Make a list of orders
             List<Order> orderList = new List<Order>();
             
-            //Make some products
+            //Make 5 products. 
             Products product1 = new Products();
             product1.SetProductName("Monitor");
             product1.SetProductPrice(250);
@@ -53,13 +53,13 @@ namespace Practice2
             notUSAShippingFee.SetProductID("notUSShipping");
             notUSAShippingFee.SetProductQuantity(1);
 
-            //Make customer addresses
+            //Make 2 customer's addresses
             Address customer1 = new Address();
             customer1.SetAddress("345 Livington St.","Rexburg","Idaho","USA");
             Address customer2 = new Address();
             customer2.SetAddress("348 Andres Bonifacio St.","Diffun","Quirino","Philippines");
             
-            //Make Order lines and add to order
+            //Make orders for each customers and set the customer name, order number and order address. 
             Order order1 = new Order();            
             order1.SetCustomerName("Junior Germain");
             order1.SetOrderNo(2588963);
@@ -83,7 +83,7 @@ namespace Practice2
             orderList.Add(order1);
             orderList.Add(order2);
 
-            //Print from a list of orders
+            //Print all the orders in the list.
             foreach (Order order in orderList)
             {
                 Address orderAddress = order.GetOrderAddress();
